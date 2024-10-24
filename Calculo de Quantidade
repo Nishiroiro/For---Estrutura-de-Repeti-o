@@ -1,0 +1,27 @@
+print("Olá, sou o python novamente! \n O que deseja?")
+resp = input("Digite a resposta:")
+print(resp)
+idade_maior = 0
+idade_menor = float('inf')
+masculino = "homem"
+feminino = "mulher"
+cont_hom = 0
+cont_mul = 0
+soma_idade=0
+nome_velho = ""
+quant = int(input("Quantas pessoas deseja analisar?"))
+
+for c in range(quant):
+    nome=input("Qual é o nome da pessoa?").capitalize()
+    idade=int(input("Qual é sua idade?"))
+    sexo=input("Qual é o seu sexo?").capitalize()
+    soma_idade+=idade
+    if idade > idade_maior and sexo == masculino:
+        idade_maior = idade
+        nome_velho = nome
+        if idade < 20 and sexo == feminino:
+            cont_mul+=1
+media = idade / quant
+print("A média das idades é {} anos!".format(media))
+print("O nome da homem mais velho é {}".format(nome_velho))
+print("A quantidade de mulheres menors de 20 anos é {}!".format(cont_mul))
