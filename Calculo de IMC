@@ -1,0 +1,25 @@
+from time import sleep
+print("Olá, aqui é o python analisador de IMC")
+nome=input("Qual é o seu nome?")
+peso=float(input("Quantos kg você pesa?"))
+altura=float(input("Qual é a sua altura?"))
+
+IMC=(peso/(altura*altura))
+
+print("Vamos calcular seu IMC...")
+print("Carregando...")
+sleep(5)
+
+print("Seu IMC é de {:.1f}".format(IMC))
+
+if IMC < 18.5:
+    print("Seu IMC é abaixo da média!")
+elif IMC >= 18.5 and IMC <= 25:
+    print("Seu IMC é ideal!")
+elif IMC >= 25 and IMC <= 30:
+    print("Seu IMC está com Sobrepeso!")
+elif IMC >= 30 and IMC <= 40:
+    print("Seu IMC está com Obesidade!")
+else:
+    print("Está com Obesidade Mórbida! Por favor, se cuide urgente!!!")
+    print("Obrigado por se consultar comigo!")
